@@ -1590,3 +1590,98 @@ footer {
         height: 300px;
     }
 }
+/* Fix for destination images */
+.destination-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure images don't repeat */
+.destination-image {
+    background-repeat: no-repeat;
+}
+
+/* Add this to prevent broken image icons */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fallback for broken background images */
+.destination-image:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.destination-image h3 {
+    position: relative;
+    z-index: 2;
+}
+/* Thank You Page Styles */
+.thank-you {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.thank-you-content h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.thank-you-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+/* Fix for mobile viewport */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 1rem 0;
+    }
+    
+    /* Hero section adjustments */
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    /* Destination grid adjustment */
+    .destinations-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Form adjustments */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}

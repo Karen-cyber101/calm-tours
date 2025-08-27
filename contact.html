@@ -230,6 +230,60 @@
         </div>
     </section>
 
+    <form class="contact-form" action="https://formsubmit.co/karenlyimo20@gmail.com" method="POST">
+    <!-- FormSubmit Configuration -->
+    <input type="hidden" name="_subject" value="New inquiry from Calm Tours website">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://karen-cyber101.github.io/calm-tours/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
+    
+    <!-- Your form fields (make sure each has a name attribute) -->
+    <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    
+    <!-- Add name attributes to all your other fields -->
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+    </div>
+    
+    <div class="form-group">
+        <label for="interest">I'm interested in</label>
+        <select id="interest" name="interest">
+            <option value="">Select an option</option>
+            <option value="zanzibar">Zanzibar Experience</option>
+            <option value="saadani">Saadani National Park</option>
+            <option value="mikumi">Mikumi National Park</option>
+            <option value="custom">Custom Itinerary</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="travel-date">Preferred Travel Date</label>
+        <input type="date" id="travel-date" name="travel_date">
+    </div>
+    
+    <div class="form-group">
+        <label for="travelers">Number of Travelers</label>
+        <input type="number" id="travelers" name="travelers" min="1" max="20">
+    </div>
+    
+    <div class="form-group full-width">
+        <label for="message">Your Message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -265,7 +319,7 @@
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <ul>
-                        <li><i class="fas fa-envelope"></i> info@calmtours.com</li>
+                        <li><i class="fas fa-envelope"></i> karenlyimo20@gmail.com</li>
                         <li><i class="fas fa-phone"></i> +255 123 456 789</li>
                         <li><i class="fab fa-instagram"></i> @calm_tours</li>
                         <li><i class="fas fa-map-marker-alt"></i> Zanzibar, Tanzania</li>
@@ -305,5 +359,33 @@
             });
         });
     </script>
+
+    <script>
+// Mobile menu toggle - Fixed version
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            
+            // Prevent body scrolling when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+    }
+    
+    // Close menu when clicking on links
+    const navItems = document.querySelectorAll('.nav-links a');
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+});
+  </script>
 </body>
 </html>

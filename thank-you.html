@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Calm Tours</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">CALM TOURS</div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="thank-you">
+        <div class="container">
+            <div class="thank-you-content">
+                <h1>Thank You!</h1>
+                <p>Your message has been received. We'll get back to you within 24 hours.</p>
+                <a href="index.html" class="btn">Return to Homepage</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+// Mobile menu toggle - Fixed version
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            
+            // Prevent body scrolling when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+    }
+    
+    // Close menu when clicking on links
+    const navItems = document.querySelectorAll('.nav-links a');
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+});
+  </script>
+  
+</body>
+</html>
