@@ -111,51 +111,59 @@
                 
                 <div class="contact-form-container">
                     <h2>SEND US A MESSAGE</h2>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="interest">I'm interested in</label>
-                            <select id="interest" name="interest">
-                                <option value="">Select an option</option>
-                                <option value="zanzibar">Zanzibar Experience</option>
-                                <option value="saadani">Saadani National Park</option>
-                                <option value="mikumi">Mikumi National Park</option>
-                                <option value="custom">Custom Itinerary</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="travel-date">Preferred Travel Date</label>
-                            <input type="date" id="travel-date" name="travel-date">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="travelers">Number of Travelers</label>
-                            <input type="number" id="travelers" name="travelers" min="1" max="20">
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
+                    <form class="contact-form" action="https://formsubmit.co/karenlyimo20@gmail.com" method="POST">
+    <!-- FormSubmit Configuration -->
+    <input type="hidden" name="_subject" value="New inquiry from Calm Tours website">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://karen-cyber101.github.io/calm-tours/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
+    
+    <!-- Your form fields (make sure each has a name attribute) -->
+    <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    
+    <!-- Add name attributes to all your other fields -->
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+    </div>
+    
+    <div class="form-group">
+        <label for="interest">I'm interested in</label>
+        <select id="interest" name="interest">
+            <option value="">Select an option</option>
+            <option value="zanzibar">Zanzibar Experience</option>
+            <option value="saadani">Saadani National Park</option>
+            <option value="mikumi">Mikumi National Park</option>
+            <option value="custom">Custom Itinerary</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="travel-date">Preferred Travel Date</label>
+        <input type="date" id="travel-date" name="travel_date">
+    </div>
+    
+    <div class="form-group">
+        <label for="travelers">Number of Travelers</label>
+        <input type="number" id="travelers" name="travelers" min="1" max="20">
+    </div>
+    
+    <div class="form-group full-width">
+        <label for="message">Your Message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    
+    <button type="submit" class="btn">Send Message</button>
+  </form>
                 </div>
             </div>
         </div>
@@ -229,60 +237,6 @@
             </div>
         </div>
     </section>
-
-    <form class="contact-form" action="https://formsubmit.co/karenlyimo20@gmail.com" method="POST">
-    <!-- FormSubmit Configuration -->
-    <input type="hidden" name="_subject" value="New inquiry from Calm Tours website">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://karen-cyber101.github.io/calm-tours/thank-you.html">
-    <input type="hidden" name="_captcha" value="false">
-    
-    <!-- Your form fields (make sure each has a name attribute) -->
-    <div class="form-group">
-        <label for="name">Full Name *</label>
-        <input type="text" id="name" name="name" required>
-    </div>
-    
-    <div class="form-group">
-        <label for="email">Email Address *</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    
-    <!-- Add name attributes to all your other fields -->
-    <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone">
-    </div>
-    
-    <div class="form-group">
-        <label for="interest">I'm interested in</label>
-        <select id="interest" name="interest">
-            <option value="">Select an option</option>
-            <option value="zanzibar">Zanzibar Experience</option>
-            <option value="saadani">Saadani National Park</option>
-            <option value="mikumi">Mikumi National Park</option>
-            <option value="custom">Custom Itinerary</option>
-            <option value="other">Other</option>
-        </select>
-    </div>
-    
-    <div class="form-group">
-        <label for="travel-date">Preferred Travel Date</label>
-        <input type="date" id="travel-date" name="travel_date">
-    </div>
-    
-    <div class="form-group">
-        <label for="travelers">Number of Travelers</label>
-        <input type="number" id="travelers" name="travelers" min="1" max="20">
-    </div>
-    
-    <div class="form-group full-width">
-        <label for="message">Your Message *</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-    </div>
-    
-    <button type="submit" class="btn">Send Message</button>
-  </form>
 
     <!-- Footer -->
     <footer>
